@@ -1,0 +1,11 @@
+{% extends '_base.html' %}
+
+{% block content%}
+
+<h2> Details about {{ incident.summary }}</h2>
+<h2> Reporter {{ incident.reporter }}</h2>
+<p>{{ incident.detail }}</p>
+<a href="{% url 'incident_update' incident.pk %}"> Update </a>
+  <a href="{% url 'incident_delete' incident.pk %}">  Delete </a>
+
+{% endblock content%}
